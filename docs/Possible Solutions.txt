@@ -1,0 +1,22 @@
+Possible Solution:
+- Every orchard has following attributes,
+-- It has starting number of trees
+-- Rate of trees regeneration/degeneration for a period
+-- Path between 2 towns
+- Every town has following attributes,
+-- Projected apple consumption rate for a period, which is directly linked to number of tree available in orchards
+- A period has following behaviours
+-- it can be cycled
+-- it has starting point, which is just before it's being cycled
+-- it has end point, which is just after it's being cycled
+- Cycle a period will do following tasks
+-- Decide to open or close orchard dependant of following facts
+--- ensure that orchard is not depleted to 0 when it is open, close it otherwise
+--- get single or multiple network of open orchards
+--- for each network, calculate what are towns consumption rate
+--- using a graph algorithm, evaluate if we can push all required town's apple demand
+---- possible algorithm including linear programming or Edmund Karp
+---- from this process, we can find alternative routes if orchard is closed
+--- close all orchards that are not required to cover towns demand, so they can be used for future period
+--- move cycle forward which will in turn, push apples to towns and reduce number of trees in all open orchards
+-- this whole process is going to be executed again for the next period until all periods are covered

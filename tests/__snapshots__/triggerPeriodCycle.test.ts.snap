@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Trigger Period Cycle Get Schedule 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "isOpen": true,
+      "name": "1",
+    },
+    {
+      "isOpen": true,
+      "name": "2",
+    },
+    {
+      "isOpen": false,
+      "name": "3",
+    },
+  ],
+}
+`;
