@@ -1,102 +1,65 @@
-interface INetwork {
+import { alg, Edge, Graph } from "@dagrejs/graphlib";
+import { Orchard } from "./orchard";
+import { createGraph } from "./createGraph";
+
+export interface Network {
   getSize: () => number;
   executeSearch: () => void;
   getOpenOrchards: () => Orchard[];
-  getCloseOrchards: () => Orchard[];
 }
 
-interface INode {
-  getValue: () => number;
-}
+export class GraphLibNetwork implements Network {
+  orchards: Orchard[];
+  graph: Graph;
+  openOrchards: Orchard[] = [];
 
-class Orchard implements INode {
-  name: string;
-  rate: number;
-  isOpen: boolean;
-  numberOfTree: number;
-  towns: Town[];
+  constructor(orchards: Orchard[]) {
+    this.orchards = orchards;
 
-  constructor(
-    name: string,
-    rate: number,
-    isOpen: boolean,
-    numberOfTree: number,
-    towns: Town[]
-  ) {
-    this.name = name;
-    this.rate = rate;
-    this.isOpen = isOpen;
-    this.numberOfTree = numberOfTree;
-    this.towns = towns;
+    this.graph = createGraph(orchards);
   }
 
-  getValue = () => {
-    //assumption 1 tree = 100 apples
-    const ratioTreeToApple = 100;
-    return this.numberOfTree * ratioTreeToApple;
-  };
+  getSize() {
+    return this.graph.nodeCount();
+  }
+  executeSearch() {
+    // Edge's prim algo weight evaluation is to check if it is best
+    // to open in this period based on when was it open and
+    // orchard's number of trees available against total available.
+    // ref=https://en.wikipedia.org/wiki/Prim%27s_algorithm
+    const mapWeight = new Map<string, number>();
 
-  close = () => {
-    this.isOpen = false;
-  };
+    const totalOpen = this.orchards
+      .filter((o) => o.isOpen)
+      .reduce((partialSum, a) => partialSum + a.numberOfTree, 0);
 
-  runPeriod = () => {
-    if (this.numberOfTree - this.rate <= 0) {
-      this.close();
-    } else {
-      this.isOpen = true;
+    for (const orchard of this.orchards) {
+      mapWeight.set(
+        orchard.name,
+        -(((1 + orchard.getWeight()) * orchard.numberOfTree) / totalOpen)
+      );
     }
-  };
-  commit = () => {
-    if (this.isOpen) {
-      this.numberOfTree -= this.rate;
-    } else {
-      this.numberOfTree += this.rate;
-    }
-  };
-}
 
-class Town implements INode {
-  name: string;
-  consumptionRate: number;
+    const calculateWeight = (e: Edge) =>
+      mapWeight.get(this.graph.edge(e.v, e.w) ?? "") ?? 1;
 
-  constructor(name: string, consumptionRate: number) {
-    this.name = name;
-    this.consumptionRate = consumptionRate;
+    const evaluatedGraphs = alg.prim(this.graph, calculateWeight);
+
+    // End of prim algo calc
+
+    const edges = evaluatedGraphs.edges();
+    this.openOrchards = edges
+      .map((e) =>
+        this.orchards.find((o) => o.name === this.graph.edge(e.v, e.w))
+      )
+      .filter((o) => o !== undefined);
   }
-
-  getValue = () => {
-    return -this.consumptionRate;
-  };
-}
-
-interface INetworkProvider {
-  getNetworks: () => INetwork[];
-}
-
-interface ScheduleEntry {
-  name: string;
-  isOpen: boolean;
-}
-interface Schedule {
-  orchardStatuses: ScheduleEntry[];
-}
-const triggerPeriodCycle = (networkProvider: INetworkProvider): Schedule => {
-  const networks = networkProvider
-    .getNetworks()
-    .sort((a, b) => a.getSize() - b.getSize());
-  let orchardStatuses: ScheduleEntry[] = [];
-  for (const network of networks) {
-    network.executeSearch();
-    orchardStatuses = [
-      ...orchardStatuses,
-      ...network.getOpenOrchards().map((l) => ({ name: l.name, isOpen: true })),
-      ...network
-        .getCloseOrchards()
-        .map((l) => ({ name: l.name, isOpen: false })),
-    ];
+  getOpenOrchards(): Orchard[] {
+    return this.openOrchards;
   }
-  return { orchardStatuses };
-};
-
-export { Town, Orchard, triggerPeriodCycle, INetworkProvider };
+  getCloseOrchards(): Orchard[] {
+    return this.orchards.filter(
+      (o) => this.openOrchards.find((oc) => o === oc) === undefined
+    );
+  }
+}

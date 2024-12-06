@@ -4,15 +4,18 @@ exports[`Trigger Period Cycle Get Schedule 1`] = `
 {
   "orchardStatuses": [
     {
+      "currentTree": 20,
       "isOpen": true,
       "name": "1",
     },
     {
+      "currentTree": 15,
       "isOpen": true,
       "name": "2",
     },
     {
-      "isOpen": false,
+      "currentTree": 7,
+      "isOpen": true,
       "name": "3",
     },
   ],

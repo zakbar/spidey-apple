@@ -1,0 +1,445 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`12 Periods Scenario Period 1 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "currentTree": 500,
+      "isOpen": true,
+      "name": "Orchard 1",
+    },
+    {
+      "currentTree": 500,
+      "isOpen": true,
+      "name": "Orchard 2",
+    },
+    {
+      "currentTree": 500,
+      "isOpen": false,
+      "name": "Orchard 3",
+    },
+    {
+      "currentTree": 500,
+      "isOpen": false,
+      "name": "Orchard 4",
+    },
+    {
+      "currentTree": 500,
+      "isOpen": true,
+      "name": "Orchard 5",
+    },
+    {
+      "currentTree": 500,
+      "isOpen": true,
+      "name": "Orchard 6",
+    },
+  ],
+}
+`;
+
+exports[`12 Periods Scenario Period 2 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "currentTree": 400,
+      "isOpen": false,
+      "name": "Orchard 1",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": true,
+      "name": "Orchard 2",
+    },
+    {
+      "currentTree": 600,
+      "isOpen": true,
+      "name": "Orchard 3",
+    },
+    {
+      "currentTree": 600,
+      "isOpen": true,
+      "name": "Orchard 4",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": false,
+      "name": "Orchard 5",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": true,
+      "name": "Orchard 6",
+    },
+  ],
+}
+`;
+
+exports[`12 Periods Scenario Period 3 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "currentTree": 500,
+      "isOpen": true,
+      "name": "Orchard 1",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": false,
+      "name": "Orchard 2",
+    },
+    {
+      "currentTree": 500,
+      "isOpen": true,
+      "name": "Orchard 3",
+    },
+    {
+      "currentTree": 500,
+      "isOpen": true,
+      "name": "Orchard 4",
+    },
+    {
+      "currentTree": 500,
+      "isOpen": true,
+      "name": "Orchard 5",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": false,
+      "name": "Orchard 6",
+    },
+  ],
+}
+`;
+
+exports[`12 Periods Scenario Period 4 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "currentTree": 400,
+      "isOpen": true,
+      "name": "Orchard 1",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": true,
+      "name": "Orchard 2",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": false,
+      "name": "Orchard 3",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": false,
+      "name": "Orchard 4",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": true,
+      "name": "Orchard 5",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": true,
+      "name": "Orchard 6",
+    },
+  ],
+}
+`;
+
+exports[`12 Periods Scenario Period 5 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "currentTree": 300,
+      "isOpen": false,
+      "name": "Orchard 1",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": true,
+      "name": "Orchard 2",
+    },
+    {
+      "currentTree": 500,
+      "isOpen": true,
+      "name": "Orchard 3",
+    },
+    {
+      "currentTree": 500,
+      "isOpen": true,
+      "name": "Orchard 4",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": false,
+      "name": "Orchard 5",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": true,
+      "name": "Orchard 6",
+    },
+  ],
+}
+`;
+
+exports[`12 Periods Scenario Period 6 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "currentTree": 400,
+      "isOpen": true,
+      "name": "Orchard 1",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": false,
+      "name": "Orchard 2",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": true,
+      "name": "Orchard 3",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": true,
+      "name": "Orchard 4",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": true,
+      "name": "Orchard 5",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": false,
+      "name": "Orchard 6",
+    },
+  ],
+}
+`;
+
+exports[`12 Periods Scenario Period 7 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "currentTree": 300,
+      "isOpen": true,
+      "name": "Orchard 1",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": true,
+      "name": "Orchard 2",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": false,
+      "name": "Orchard 3",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": false,
+      "name": "Orchard 4",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": true,
+      "name": "Orchard 5",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": true,
+      "name": "Orchard 6",
+    },
+  ],
+}
+`;
+
+exports[`12 Periods Scenario Period 8 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "currentTree": 200,
+      "isOpen": false,
+      "name": "Orchard 1",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": true,
+      "name": "Orchard 2",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": true,
+      "name": "Orchard 3",
+    },
+    {
+      "currentTree": 400,
+      "isOpen": true,
+      "name": "Orchard 4",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": false,
+      "name": "Orchard 5",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": true,
+      "name": "Orchard 6",
+    },
+  ],
+}
+`;
+
+exports[`12 Periods Scenario Period 9 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "currentTree": 300,
+      "isOpen": true,
+      "name": "Orchard 1",
+    },
+    {
+      "currentTree": 100,
+      "isOpen": false,
+      "name": "Orchard 2",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": true,
+      "name": "Orchard 3",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": true,
+      "name": "Orchard 4",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": true,
+      "name": "Orchard 5",
+    },
+    {
+      "currentTree": 100,
+      "isOpen": false,
+      "name": "Orchard 6",
+    },
+  ],
+}
+`;
+
+exports[`12 Periods Scenario Period 10 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "currentTree": 200,
+      "isOpen": true,
+      "name": "Orchard 1",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": false,
+      "name": "Orchard 2",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": true,
+      "name": "Orchard 3",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": true,
+      "name": "Orchard 4",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": true,
+      "name": "Orchard 5",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": false,
+      "name": "Orchard 6",
+    },
+  ],
+}
+`;
+
+exports[`12 Periods Scenario Period 11 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "currentTree": 100,
+      "isOpen": false,
+      "name": "Orchard 1",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": true,
+      "name": "Orchard 2",
+    },
+    {
+      "currentTree": 100,
+      "isOpen": false,
+      "name": "Orchard 3",
+    },
+    {
+      "currentTree": 100,
+      "isOpen": false,
+      "name": "Orchard 4",
+    },
+    {
+      "currentTree": 100,
+      "isOpen": false,
+      "name": "Orchard 5",
+    },
+    {
+      "currentTree": 300,
+      "isOpen": true,
+      "name": "Orchard 6",
+    },
+  ],
+}
+`;
+
+exports[`12 Periods Scenario Period 12 1`] = `
+{
+  "orchardStatuses": [
+    {
+      "currentTree": 200,
+      "isOpen": true,
+      "name": "Orchard 1",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": false,
+      "name": "Orchard 2",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": true,
+      "name": "Orchard 3",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": false,
+      "name": "Orchard 4",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": false,
+      "name": "Orchard 5",
+    },
+    {
+      "currentTree": 200,
+      "isOpen": true,
+      "name": "Orchard 6",
+    },
+  ],
+}
+`;

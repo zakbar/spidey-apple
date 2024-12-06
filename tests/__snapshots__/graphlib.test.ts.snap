@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Generate Basic  1`] = `
+[
+  {
+    "v": "B",
+    "w": "A",
+  },
+  {
+    "v": "C",
+    "w": "A",
+  },
+  {
+    "v": "D",
+    "w": "B",
+  },
+  {
+    "v": "E",
+    "w": "D",
+  },
+]
+`;
+
+exports[`Multiple Network  1`] = `
+[
+  [
+    "A",
+    "B",
+    "C",
+  ],
+  [
+    "D",
+    "E",
+  ],
+]
+`;
